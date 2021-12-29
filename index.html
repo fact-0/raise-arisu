@@ -19,7 +19,7 @@ img {
 아리스를 클릭해보세요!&nbsp;<button class="mt10" type="button" onclick="reset();">밸런스 붕괴</button>
 <br/><br/>
 <div>
-	<img id="flareon" onclick="growth();" src="./arisu.webp">
+	<img id="arisu" onclick="growth();" src="./arisu.webp" style="visibility: hidden;">
 	<br/><br/>
 	정직한 제목. 정직한 내용.
 </div>
@@ -27,19 +27,18 @@ img {
 
 
 <script type="text/javascript">
-window.onload = ()=>{
-	reset();
-}
 
-let flareon = document.getElementById("flareon");
+let arisu = document.getElementById("arisu");
+reset();
+arisu.style = "visibility: initial;";
 
 function growth(){
-	flareon.height += flareon.width;
-	flareon.width += flareon.width;
+	arisu.height += arisu.width;
+	arisu.width += arisu.width;
 }
 function reset(){
-	flareon.width = 100;
-	flareon.height = 100;
+	arisu.width = 100;
+	arisu.height = 100;
 }
 </script>
 
